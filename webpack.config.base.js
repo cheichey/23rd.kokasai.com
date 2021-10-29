@@ -7,8 +7,6 @@ const WriteFilePlugin = require("write-file-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: "development",
-
   entry: "./src/index.tsx",
 
   output: {
@@ -53,19 +51,6 @@ module.exports = {
         ]
       },
     ],
-  },
-  devServer: {
-    static: {
-      directory: `${__dirname}/static`
-    },
-    hot: true,
-    historyApiFallback: true,
-    proxy: {
-      '/login':{
-        target: 'https://kokasai.com',
-        changeOrigin: true
-      }
-    }
   },
 
   plugins: [

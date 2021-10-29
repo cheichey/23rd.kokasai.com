@@ -6,8 +6,8 @@
   "main": "index.tsx",
   "scripts": {
     "prettier": "prettier ./src --ext ts,tsx --write",
-    "start": "webpack serve",
-    "build": "webpack",
+    "start": "webpack serve --config webpack.config.dev.js",
+    "build": "webpack --config webpack.config.product.js",
     "lint": "eslint . --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --fix --ext .js,.ts,.tsx"
   },
@@ -53,6 +53,7 @@
     "webpack": "^5.55.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.3.0",
+    "webpack-merge": "^5.8.0",
     "write-file-webpack-plugin": "^4.5.1"
   }
 }
